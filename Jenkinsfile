@@ -12,7 +12,7 @@ node {
     stage 'Build application Docker image'
     def appImg = docker.build("nicolas-deloof/petclinic")
 
-    stage 'Push to GCR'
+    stage 'Push docker image  to GCR'
     docker.withRegistry('https://gcr.io', 'gcr:nicolas-deloof') {
         appImg.push();
     }
