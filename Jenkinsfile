@@ -17,7 +17,7 @@ node {
         appImg.push();
     }
 
-    stage 'Run app on Kubernetes'
+    stage 'Run app on Kubernetes Cluster'
     withKubernetes( serverUrl: 'https://146.148.36.159', credentialsId: 'kubeadmin' ) {
           sh 'kubectl run petclinic --image=gcr.io/nicolas-deloof/petclinic --port=8080'
     }
