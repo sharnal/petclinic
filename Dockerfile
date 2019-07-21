@@ -1,2 +1,2 @@
-FROM tfennelly/tomcat7:2.0
+FROM tfennelly/tomcat7:latest
 ADD target/petclinic.war /tomcat7/webapps/petclinic.war
